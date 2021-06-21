@@ -1,8 +1,11 @@
 # gitea_time_tracker
 A simple way to visualize time logged in gitea issues
 
+## Contributing
+This project is a work in progress.  Have improvements or changes you want to contribute? Feel free to create a branch and PR.
+
 ## Database Configuration
-Create a new mysql database on your gitea instance, and create a view in that database.  This view will be used to populate all of the pages.
+Create a new mysql database on your gitea instance, and create a view in that database.  This view will be used to populate all of the pages.  If an issue is not linked to a project, it will not be included.
 
 ```
 CREATE VIEW time_track_view AS
@@ -25,4 +28,6 @@ where t.issue_id = i.id
  and r.id = p.repo_id
 ```
 
-
+## index.php
+This page displays a table of issues with logged time, that are linked to projects.
+![index page](images/index.png)
