@@ -41,7 +41,7 @@ This page displays a table of projects, and the cumaltive time logged to each of
 
 ## project.php
 This page displays a table of issues in the project you selected that have time logged to them, along with the cumalitive time logged to each issue.  A bar graph is also shown with the same data.
-![project page](imapges/project.png)
+![project page](images/project.png)
 
 ## issue.php
 This page displays a table of time entries that have been added to the issue you selected, along with the unix timestamp when the entry was logged.
