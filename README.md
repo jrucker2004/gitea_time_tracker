@@ -30,4 +30,4 @@ where t.issue_id = i.id
 
 ## index.php
 This page displays a table of issues with logged time, that are linked to projects.
-![index page](images/index.png)
+![index page](images/index_page.png)
