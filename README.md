@@ -22,10 +22,13 @@ from
  gitea.tracked_time t,
  gitea.issue i,
  gitea.project p,
- gitea.repository r
+ gitea.repository r,
+ gitea.project_issue pi
 where t.issue_id = i.id
  and r.id = i.repo_id
- and r.id = p.repo_id
+ and p.repo_id = r.id
+ and pi.issue_id = i.id
+ and pi.project_id = p.id
 ```
 
 ## index.php
