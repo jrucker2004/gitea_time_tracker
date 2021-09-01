@@ -29,6 +29,13 @@ while($row = mysqli_fetch_array($issue_time_sql)) {
 
 $len = count($issue_id);
 
+// Convert time from seconds to hours/minutes
+
+for ($x = 0; $x < $len; $x++) {
+        $logged_time[$x] = round($logged_time[$x] / 3600,2);
+
+}
+
 /******************************
 /
 / Display a table of time entries for the issue
@@ -45,7 +52,7 @@ echo "<h3>Issue: " . $issue_name[0] . "</h3>";
 echo "<table>";
 echo "  <tr>";
 echo "    <th>Date Log Entry Added</th>";
-echo "    <th>Time Logged (sec)</th>";
+echo "    <th>Time Logged (hours)</th>";
 echo "  </tr>";
 
 for ($x = 0; $x < $len; $x++) {
