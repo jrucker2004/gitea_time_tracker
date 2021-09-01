@@ -35,6 +35,11 @@ for ($x = 0; $x < $len; $x++) {
 
 }
 
+// Add up all of the time for a total
+
+for ($x = 0; $x < $len; $x++) {
+        $tot_time = $tot_time + $logged_time[$x];
+}
 
 /******************************
  *
@@ -62,6 +67,10 @@ for ($x = 0; $x < $len; $x++) {
   echo "  </tr>";
 }
 
+echo "  <tr>";
+echo "    <th>Total Time Logged</th>";
+echo "    <th>" . $tot_time . "</th>";
+echo "  </tr>";
 echo "</table>";
 /******************************
  *
