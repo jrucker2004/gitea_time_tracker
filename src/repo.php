@@ -27,6 +27,14 @@ while($row = mysqli_fetch_array($issue_time_sql)) {
 
 $len = count($project_id);
 
+// Convert time from seconds to hours/minutes
+
+for ($x = 0; $x < $len; $x++) {
+	$logged_time[$x] = round($logged_time[$x] / 3600,2);
+
+}
+
+
 /******************************
 /
 / Display a table of time entries for the issue
@@ -41,7 +49,7 @@ echo "<h2>Repository: " . $repo_name[0] . "</h2>";
 echo "<table>";
 echo "  <tr>";
 echo "    <th>Project Title</th>";
-echo "    <th>Time Logged (sec)</th>";
+echo "    <th>Time Logged (hours)</th>";
 echo "  </tr>";
 
 for ($x = 0; $x < $len; $x++) {
